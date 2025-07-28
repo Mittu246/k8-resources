@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    component: sql
+    tier: backend
+    project: roboshop
+    environment: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
