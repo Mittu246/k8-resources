@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    component: sql
+    tier: backend
+    project: roboshop
+    environment: dev
+  annotations:
+    description: "This pod is cretaed to demonstrate pod annaotations"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
