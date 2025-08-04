@@ -19,7 +19,7 @@ spec:
         purpose: rs-demo
         project: roboshop
         app: nginx
-    spec:
-      containers:
+  spec:
+    containers:
       - name: nginx
         image: nginx
