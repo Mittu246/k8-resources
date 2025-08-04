@@ -9,7 +9,7 @@ spec:
     purpose: service-demo
     project: roboshop
     environment: dev
-  port: 
+  ports: 
     - protocol: TCP
       port: 80 # service port
       targetPort: 80 # container port
