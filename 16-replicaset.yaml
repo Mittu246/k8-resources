@@ -9,7 +9,7 @@ metadata:
 spec:
   replicas: 3
   selector: 
-    matchlables: 
+    matchLables: 
       purpose: rs-demo
       project: roboshop
       app: nginx
