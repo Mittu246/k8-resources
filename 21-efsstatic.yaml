@@ -8,7 +8,7 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  storageClassName: #should be empty in static
+  storageClassName: #should be empty in static provisioning
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
