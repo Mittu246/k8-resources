@@ -29,7 +29,10 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: efs-static
+  name: nginx
+  labels:
+    purpose: efs-static-demo
+    project: roboshop
 spec:
   containers:
   - name: nginx
@@ -41,3 +44,20 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: efs-static
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: efs-static
+  labels:
+    purpose: service-lb-demo
+    project: roboshop
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: efs-static-demo
+    project: roboshop
+  ports: 
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: 80 # container 
